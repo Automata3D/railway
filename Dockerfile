@@ -5,4 +5,5 @@ WORKDIR /opt/ml_in_app
 
 # install packages by conda
 RUN pip install -r requirements_prod.txt
+RUN pip install reverse_geocoder
 CMD ["python", "app.py"]
