@@ -59,7 +59,7 @@ with open('dtypes.pickle', 'rb') as fh:
 app = Flask(__name__)
 
 
-@app.route('/should_search', methods=['POST'])
+@app.route('/should_search/', methods=['POST'])
 def should_search():
     # Flask provides a deserialization convenience function called
     # get_json that will work if the mimetype is application/json.
@@ -165,7 +165,7 @@ def should_search():
 
 #######################################################################
 
-@app.route('/search_result', methods=['POST'])
+@app.route('/search_result/', methods=['POST'])
 def search_result():
     
     obs = request.get_json()
@@ -192,7 +192,7 @@ def search_result():
     
     
 
-@app.route('/update', methods=['POST'])
+@app.route('/update/', methods=['POST'])
 def update():
     obs = request.get_json()
     try:
